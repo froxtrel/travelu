@@ -39,7 +39,27 @@ class Welcome extends CI_Controller {
 
 	public function listing() {
 
-		$this->load->view('list');
+		$cat = $this->uri->segment(3);
+
+		switch ($cat) {
+
+			case 'rafting':
+				$list = $this->Tour->get_rafting_list();
+				$cat = 'White Water Rafting';
+				break;
+			
+			default:
+				# code...
+				break;
+		}
+
+		$data = array(
+
+		   'cat' => $cat,
+		   'list' => $list
+ 		);
+
+		$this->load->view('list',$data);
 	}
 }
 

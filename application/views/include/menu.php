@@ -102,7 +102,7 @@
 							</div>
 							<div id="tg-navigation" class="collapse navbar-collapse tg-navigation">
 								<ul>
-									<li class="menu-item-has-children current-menu-item"><a href="javascript:void(0);">Home</a>
+									<li class="menu-item-has-children current-menu-item"><a href="<?=base_url();?>">Home</a>
 										<ul class="sub-menu">
 											<li class="current-menu-item"><a href="index.html">Home ~ Modern</a></li>
 											<li><a href="indexv2.html">Home ~ Full Screen</a></li>

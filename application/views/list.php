@@ -1,4 +1,6 @@
-<?php include('include/header.php') ?>
+<?php include('include/header.php');
+//print_r($list);
+?>
 
 <body>
 	<!--[if lt IE 8]>
@@ -27,7 +29,7 @@
 <!--************************************
 				Inner Banner Start
 		*************************************-->
-		<section class="tg-parallax tg-innerbanner" data-appear-top-offset="600" data-parallax="scroll" data-image-src="<?= base_url();?>public/images/parallax/kiulu-2.jpg">
+		<!-- <section class="tg-parallax tg-innerbanner" data-appear-top-offset="600" data-parallax="scroll" data-image-src="<?= base_url();?>public/images/parallax/kiulu-2.jpg">
 			<div class="tg-sectionspace tg-haslayout">
 				<div class="container">
 					<div class="row">
@@ -42,7 +44,7 @@
 					</div>
 				</div>
 			</div>
-		</section>
+		</section> -->
 		<!--************************************
 				Inner Banner End
 		*************************************-->
@@ -56,23 +58,26 @@
 						<div id="tg-content" class="tg-content">
 							<div class="tg-listing tg-listingvthree">
 								<div class="tg-sectiontitle">
-									<h2>Rafting Packages</h2>
+									<h2><?=@$cat;?> Packages</h2>
 								</div>
+
+								 <?php foreach ($list as $key ) :;?>	
+
 								<div class="tg-populartour tg-populartourvtwo">
 									<figure>
-										<a href="tourbookingdetail.html"><img src="<?= base_url();?>public/images/tours/img-19.jpg" alt="image destinations"></a>
+										<a href="tourbookingdetail.html"><img src="<?= base_url();?>public/images/tours/<?=$key['photo_1'];?>" alt="image destinations"></a>
 									</figure>
 									<div class="tg-populartourcontent">
 										<div class="tg-populartourtitle">
-											<h3><a href="tourbookingdetail.html">City Tours in Europe, Paris</a></h3>
+											<h3><a href="tourbookingdetail.html"><?=strtoupper($key['name']);?></a></h3>
 										</div>
 										<div class="tg-description">
-											<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy Etiam porta sem malesuada magna mollis euismod.</p>
-											<p>Maecenas sed diam eget risus varius blandit sit amet non magna. Vivamus sagittis lacus vel augue laoreet...</p>
+											<p><?=substr($key['tour_desc'],0,115);?></p>
+											<p><br><br><br></p>
 										</div>
 										<div class="tg-populartourfoot">
 											<div class="tg-durationrating">
-												<span class="tg-tourduration">7 Days</span>
+												<span class="tg-tourduration"><?=strtoupper($key['duration']);?></span>
 												<span class="tg-stars"><span></span></span>
 												<em>(3 Review)</em>
 											</div>
@@ -94,265 +99,21 @@
 											</div>
 											<div class="tg-pricearea">
 												<span>From</span>
-												<h4>$2,500</h4>
+												<h4>
+													<?php 
+													$price = ($key['price_adult'] != 0) ? $key['price_adult'] : $key['price_child'];
+													echo strtoupper($price);
+													?>													
+											    </h4>
 											</div>
 											<a class="tg-btn" href="tourbookingdetail.html"><span>Explore Tour</span></a>
 										</div>
 									</div>
 								</div>
-								<div class="tg-populartour tg-populartourvtwo">
-									<figure>
-										<a href="tourbookingdetail.html"><img src="<?= base_url();?>public/images/tours/img-20.jpg" alt="image destinations"></a>
-									</figure>
-									<div class="tg-populartourcontent">
-										<div class="tg-populartourtitle">
-											<h3><a href="tourbookingdetail.html">City Tours in Europe, Paris</a></h3>
-										</div>
-										<div class="tg-description">
-											<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy Etiam porta sem malesuada magna mollis euismod.</p>
-											<p>Maecenas sed diam eget risus varius blandit sit amet non magna. Vivamus sagittis lacus vel augue laoreet...</p>
-										</div>
-										<div class="tg-populartourfoot">
-											<div class="tg-durationrating">
-												<span class="tg-tourduration">7 Days</span>
-												<span class="tg-stars"><span></span></span>
-												<em>(3 Review)</em>
-											</div>
-											<ul class="tg-likeshare">
-												<li class="tg-shareicon">
-													<a href="javascript:void(0);"><i class="icon-share-button-outline"></i><span>share</span></a>
-													<ul class="tg-share">
-														<li><a href="javascript:void(0);"><i class="icon-twitter"></i></a></li>
-														<li><a href="javascript:void(0);"><i class="icon-facebook"></i></a></li>
-														<li><a href="javascript:void(0);"><i class="icon-pinterest"></i></a></li>
-													</ul>
-												</li>
-												<li><a href="javascript:void(0);"><i class="icon-heart"></i></a></li>
-											</ul>
-										</div>
-										<div class="tg-priceavailability">
-											<div class="tg-availhead">
-												<time datetime="2017-12-12">Availability : Jan 16’ - Dec 16’</time>
-											</div>
-											<div class="tg-pricearea">
-												<span>From</span>
-												<h4>$2,500</h4>
-											</div>
-											<a class="tg-btn" href="tourbookingdetail.html"><span>Explore Tour</span></a>
-										</div>
-									</div>
-								</div>
-								<div class="tg-populartour tg-populartourvtwo">
-									<figure>
-										<a href="javascript:void(0);"><img src="<?= base_url();?>public/images/tours/img-21.jpg" alt="image destinations"></a>
-									</figure>
-									<div class="tg-populartourcontent">
-										<div class="tg-populartourtitle">
-											<h3><a href="javascript:void(0);">City Tours in Europe, Paris</a></h3>
-										</div>
-										<div class="tg-description">
-											<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy Etiam porta sem malesuada magna mollis euismod.</p>
-											<p>Maecenas sed diam eget risus varius blandit sit amet non magna. Vivamus sagittis lacus vel augue laoreet...</p>
-										</div>
-										<div class="tg-populartourfoot">
-											<div class="tg-durationrating">
-												<span class="tg-tourduration">7 Days</span>
-												<span class="tg-stars"><span></span></span>
-												<em>(3 Review)</em>
-											</div>
-											<ul class="tg-likeshare">
-												<li class="tg-shareicon">
-													<a href="javascript:void(0);"><i class="icon-share-button-outline"></i><span>share</span></a>
-													<ul class="tg-share">
-														<li><a href="javascript:void(0);"><i class="icon-twitter"></i></a></li>
-														<li><a href="javascript:void(0);"><i class="icon-facebook"></i></a></li>
-														<li><a href="javascript:void(0);"><i class="icon-pinterest"></i></a></li>
-													</ul>
-												</li>
-												<li><a href="javascript:void(0);"><i class="icon-heart"></i></a></li>
-											</ul>
-										</div>
-										<div class="tg-priceavailability">
-											<div class="tg-availhead">
-												<time datetime="2017-12-12">Availability : Jan 16’ - Dec 16’</time>
-											</div>
-											<div class="tg-pricearea">
-												<span>From</span>
-												<h4>$2,500</h4>
-											</div>
-											<a class="tg-btn" href="javascript:void(0);"><span>Explore Tour</span></a>
-										</div>
-									</div>
-								</div>
-								<div class="tg-populartour tg-populartourvtwo">
-									<figure>
-										<a href="javascript:void(0);"><img src="<?= base_url();?>public/images/tours/img-22.jpg" alt="image destinations"></a>
-									</figure>
-									<div class="tg-populartourcontent">
-										<div class="tg-populartourtitle">
-											<h3><a href="javascript:void(0);">City Tours in Europe, Paris</a></h3>
-										</div>
-										<div class="tg-description">
-											<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy Etiam porta sem malesuada magna mollis euismod.</p>
-											<p>Maecenas sed diam eget risus varius blandit sit amet non magna. Vivamus sagittis lacus vel augue laoreet...</p>
-										</div>
-										<div class="tg-populartourfoot">
-											<div class="tg-durationrating">
-												<span class="tg-tourduration">7 Days</span>
-												<span class="tg-stars"><span></span></span>
-												<em>(3 Review)</em>
-											</div>
-											<ul class="tg-likeshare">
-												<li class="tg-shareicon">
-													<a href="javascript:void(0);"><i class="icon-share-button-outline"></i><span>share</span></a>
-													<ul class="tg-share">
-														<li><a href="javascript:void(0);"><i class="icon-twitter"></i></a></li>
-														<li><a href="javascript:void(0);"><i class="icon-facebook"></i></a></li>
-														<li><a href="javascript:void(0);"><i class="icon-pinterest"></i></a></li>
-													</ul>
-												</li>
-												<li><a href="javascript:void(0);"><i class="icon-heart"></i></a></li>
-											</ul>
-										</div>
-										<div class="tg-priceavailability">
-											<div class="tg-availhead">
-												<time datetime="2017-12-12">Availability : Jan 16’ - Dec 16’</time>
-											</div>
-											<div class="tg-pricearea">
-												<span>From</span>
-												<h4>$2,500</h4>
-											</div>
-											<a class="tg-btn" href="javascript:void(0);"><span>Explore Tour</span></a>
-										</div>
-									</div>
-								</div>
-								<div class="tg-populartour tg-populartourvtwo">
-									<figure>
-										<a href="javascript:void(0);"><img src="<?= base_url();?>public/images/tours/img-23.jpg" alt="image destinations"></a>
-									</figure>
-									<div class="tg-populartourcontent">
-										<div class="tg-populartourtitle">
-											<h3><a href="javascript:void(0);">City Tours in Europe, Paris</a></h3>
-										</div>
-										<div class="tg-description">
-											<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy Etiam porta sem malesuada magna mollis euismod.</p>
-											<p>Maecenas sed diam eget risus varius blandit sit amet non magna. Vivamus sagittis lacus vel augue laoreet...</p>
-										</div>
-										<div class="tg-populartourfoot">
-											<div class="tg-durationrating">
-												<span class="tg-tourduration">7 Days</span>
-												<span class="tg-stars"><span></span></span>
-												<em>(3 Review)</em>
-											</div>
-											<ul class="tg-likeshare">
-												<li class="tg-shareicon">
-													<a href="javascript:void(0);"><i class="icon-share-button-outline"></i><span>share</span></a>
-													<ul class="tg-share">
-														<li><a href="javascript:void(0);"><i class="icon-twitter"></i></a></li>
-														<li><a href="javascript:void(0);"><i class="icon-facebook"></i></a></li>
-														<li><a href="javascript:void(0);"><i class="icon-pinterest"></i></a></li>
-													</ul>
-												</li>
-												<li><a href="javascript:void(0);"><i class="icon-heart"></i></a></li>
-											</ul>
-										</div>
-										<div class="tg-priceavailability">
-											<div class="tg-availhead">
-												<time datetime="2017-12-12">Availability : Jan 16’ - Dec 16’</time>
-											</div>
-											<div class="tg-pricearea">
-												<span>From</span>
-												<h4>$2,500</h4>
-											</div>
-											<a class="tg-btn" href="javascript:void(0);"><span>Explore Tour</span></a>
-										</div>
-									</div>
-								</div>
-								<div class="tg-populartour tg-populartourvtwo">
-									<figure>
-										<a href="javascript:void(0);"><img src="<?= base_url();?>public/images/tours/img-24.jpg" alt="image destinations"></a>
-									</figure>
-									<div class="tg-populartourcontent">
-										<div class="tg-populartourtitle">
-											<h3><a href="javascript:void(0);">City Tours in Europe, Paris</a></h3>
-										</div>
-										<div class="tg-description">
-											<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy Etiam porta sem malesuada magna mollis euismod.</p>
-											<p>Maecenas sed diam eget risus varius blandit sit amet non magna. Vivamus sagittis lacus vel augue laoreet...</p>
-										</div>
-										<div class="tg-populartourfoot">
-											<div class="tg-durationrating">
-												<span class="tg-tourduration">7 Days</span>
-												<span class="tg-stars"><span></span></span>
-												<em>(3 Review)</em>
-											</div>
-											<ul class="tg-likeshare">
-												<li class="tg-shareicon">
-													<a href="javascript:void(0);"><i class="icon-share-button-outline"></i><span>share</span></a>
-													<ul class="tg-share">
-														<li><a href="javascript:void(0);"><i class="icon-twitter"></i></a></li>
-														<li><a href="javascript:void(0);"><i class="icon-facebook"></i></a></li>
-														<li><a href="javascript:void(0);"><i class="icon-pinterest"></i></a></li>
-													</ul>
-												</li>
-												<li><a href="javascript:void(0);"><i class="icon-heart"></i></a></li>
-											</ul>
-										</div>
-										<div class="tg-priceavailability">
-											<div class="tg-availhead">
-												<time datetime="2017-12-12">Availability : Jan 16’ - Dec 16’</time>
-											</div>
-											<div class="tg-pricearea">
-												<span>From</span>
-												<h4>$2,500</h4>
-											</div>
-											<a class="tg-btn" href="javascript:void(0);"><span>Explore Tour</span></a>
-										</div>
-									</div>
-								</div>
-								<div class="tg-populartour tg-populartourvtwo">
-									<figure>
-										<a href="javascript:void(0);"><img src="<?= base_url();?>public/images/tours/img-25.jpg" alt="image destinations"></a>
-									</figure>
-									<div class="tg-populartourcontent">
-										<div class="tg-populartourtitle">
-											<h3><a href="javascript:void(0);">City Tours in Europe, Paris</a></h3>
-										</div>
-										<div class="tg-description">
-											<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy Etiam porta sem malesuada magna mollis euismod.</p>
-											<p>Maecenas sed diam eget risus varius blandit sit amet non magna. Vivamus sagittis lacus vel augue laoreet...</p>
-										</div>
-										<div class="tg-populartourfoot">
-											<div class="tg-durationrating">
-												<span class="tg-tourduration">7 Days</span>
-												<span class="tg-stars"><span></span></span>
-												<em>(3 Review)</em>
-											</div>
-											<ul class="tg-likeshare">
-												<li class="tg-shareicon">
-													<a href="javascript:void(0);"><i class="icon-share-button-outline"></i><span>share</span></a>
-													<ul class="tg-share">
-														<li><a href="javascript:void(0);"><i class="icon-twitter"></i></a></li>
-														<li><a href="javascript:void(0);"><i class="icon-facebook"></i></a></li>
-														<li><a href="javascript:void(0);"><i class="icon-pinterest"></i></a></li>
-													</ul>
-												</li>
-												<li><a href="javascript:void(0);"><i class="icon-heart"></i></a></li>
-											</ul>
-										</div>
-										<div class="tg-priceavailability">
-											<div class="tg-availhead">
-												<time datetime="2017-12-12">Availability : Jan 16’ - Dec 16’</time>
-											</div>
-											<div class="tg-pricearea">
-												<span>From</span>
-												<h4>$2,500</h4>
-											</div>
-											<a class="tg-btn" href="javascript:void(0);"><span>Explore Tour</span></a>
-										</div>
-									</div>
-								</div>
-								<nav class="tg-pagination">
+
+								<?php endforeach;?>
+																												
+								<!-- <nav class="tg-pagination">
 									<ul>
 										<li class="tg-active"><a href="javascript:void(0);">1</a></li>
 										<li><a href="javascript:void(0);">2</a></li>
@@ -360,7 +121,7 @@
 										<li><a href="javascript:void(0);">4</a></li>
 										<li class="tg-nextpage"><a href="javascript:void(0);"><i class="fa fa-angle-right"></i></a></li>
 									</ul>
-								</nav>
+								</nav> -->
 							</div>
 						</div>
 					</div>

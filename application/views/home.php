@@ -8,14 +8,14 @@ $discount = 25;
  ?>
 
 <body class="tg-home tg-homevone">
-<div id="fb-root"></div>
+<!-- <div id="fb-root"></div>
 <script>(function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
   if (d.getElementById(id)) return;
   js = d.createElement(s); js.id = id;
   js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.12&appId=208984096129106&autoLogAppEvents=1';
   fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
+}(document, 'script', 'facebook-jssdk'));</script> -->
 	<!--[if lt IE 8]>
 		<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 	<![endif]-->
@@ -161,7 +161,7 @@ $discount = 25;
 							<div class="tg-toursdestinations">
 								<div class="tg-tourdestination tg-tourdestinationbigbox">
 									<figure>
-										<a href="javascript:void(0);">
+										<a href="<?= base_url();?>welcome/listing/rafting">
 											<img src="<?= base_url();?>public/images/destination/padas.jpg" alt="image destinations">
 											<div class="tg-hoverbox">
 												<div class="tg-adventuretitle">
@@ -336,7 +336,7 @@ $discount = 25;
 								
 									<div class="item tg-populartour">
 										<figure>
-											<a href="tourbookingdetail.html"><img src="<?=$key['photo_1'];?>" alt="image destinations"></a>
+											<a href="tourbookingdetail.html"><img src="<?= base_url();?>public/images/tours/<?=$key['photo_1'];?>" alt="image destinations"></a>
 											<span class="tg-descount"><?=$discount;?>% Off</span>
 										</figure>
 										<div class="tg-populartourcontent">
@@ -344,7 +344,7 @@ $discount = 25;
 												<h5><b><a href="tourbookingdetail.html"><?=strtoupper($key['name']);?></a></b></h5>
 											</div>
 											<div class="tg-description">
-												<p><?=substr($key['tour_desc'],0,120);?>...</p>
+												<p><?=substr($key['tour_desc'],0,120);?>...<a href="">Read more</a></p>
 											</div>
 											<div class="tg-populartourfoot">
 												<div class="tg-durationrating">
@@ -440,7 +440,7 @@ $discount = 25;
 							</div>
 							<div class="item tg-destination">
 								<figure>
-									<a href="javascript:void(0);"><img src="<?= base_url();?>public/images/destination/img-05.jpg" alt="image description"></a>
+									<a href="javascript:void(0);"><img src="<?= base_url();?>public/images/destination/manuk.jpg" alt="image description"></a>
 									<figcaption>
 										<h2><a href="javascript:void(0);">MANUKAN ISLAND</a></h2>
 										<div class="tg-description">
@@ -449,7 +449,7 @@ $discount = 25;
 									</figcaption>
 								</figure>
 								<figure>
-									<a href="javascript:void(0);"><img src="<?= base_url();?>public/images/destination/img-06.jpg" alt="image description"></a>
+									<a href="javascript:void(0);"><img src="<?= base_url();?>public/images/destination/kun.jpg" alt="image description"></a>
 									<figcaption>
 										<h2><a href="javascript:void(0);">KUNDASANG</a></h2>
 										<div class="tg-description">
@@ -490,7 +490,7 @@ $discount = 25;
 			<!--************************************
 					Our Guides Start
 			*************************************-->
-			<section class="tg-sectionspace tg-haslayout">
+			<!-- <section class="tg-sectionspace tg-haslayout">
 				<div class="container">
 					<div class="row">
 						<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
@@ -528,7 +528,7 @@ $discount = 25;
 						</div>
 					</div>
 				</div>
-			</section>
+			</section> -->
 			<!--************************************
 					Our Guides End
 			*************************************-->
