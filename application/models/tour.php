@@ -9,10 +9,15 @@ class Tour extends CI_Model {
     
     function get_featured_tour()
     {
-        $this->db->select("*");
-        $this->db->from('tour');
-        $this->db->where('is_hot', 1);
-        $query = $this->db->get();
+
+        $query = $this->db->query(" SELECT a.name,b.tour_desc,c.duration,d.price_adult,d.price_child,e.photo_1,f.is_hot 
+                                    FROM tour a 
+                                    inner join tour_desc b on a.id = b.id 
+                                    inner join tour_info c on a.id = c.id 
+                                    inner join tour_price d on a.id = d.id 
+                                    inner join tour_photo e on a.id = e.id 
+                                    inner join tour_status f on a.id = f.id 
+                                    WHERE f.is_hot = '1' ");
 
         if ( $query->num_rows() > 0 )
         {

@@ -3,6 +3,7 @@
 include('include/header.php');
 // print "<pre>";
 // print_r($featured);
+$discount = 25;
 
  ?>
 
@@ -336,23 +337,23 @@ include('include/header.php');
 									<div class="item tg-populartour">
 										<figure>
 											<a href="tourbookingdetail.html"><img src="<?=$key['photo_1'];?>" alt="image destinations"></a>
-											<span class="tg-descount">25% Off</span>
+											<span class="tg-descount"><?=$discount;?>% Off</span>
 										</figure>
 										<div class="tg-populartourcontent">
 											<div class="tg-populartourtitle">
 												<h5><b><a href="tourbookingdetail.html"><?=strtoupper($key['name']);?></a></b></h5>
 											</div>
 											<div class="tg-description">
-												<!-- <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh...</p> -->
+												<p><?=substr($key['tour_desc'],0,120);?>...</p>
 											</div>
 											<div class="tg-populartourfoot">
 												<div class="tg-durationrating">
-													<span class="tg-tourduration">7 Days</span>
+													<span class="tg-tourduration"><?=strtoupper($key['duration']);?></span>
 													<span class="tg-stars"><span></span></span>
-													<em>(3 Review)</em>
+													<em>Recomendded</em>
 												</div>
 												<div class="tg-pricearea">
-													<del><b>MYR</b> <?=$key['price_adult'] + ($key['price_adult'] * 0.25);?></del>
+													<del><b>MYR</b> <?=$key['price_adult'] + ($key['price_adult'] * $discount/100);?></del>
 													<h4><b>MYR</b> <?=$key['price_adult'];?></h4>
 												</div>
 											</div>
