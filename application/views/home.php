@@ -176,7 +176,7 @@ $discount = 25;
 								</div>
 								<div class="tg-tourdestination">
 									<figure>
-										<a href="javascript:void(0);">
+										<a href="<?= base_url();?>welcome/listing/kayaking">
 											<img src="<?= base_url();?>public/images/destination/kayak.jpg" alt="image destinations">
 											<div class="tg-hoverbox">
 												<div class="tg-adventuretitle">
@@ -341,10 +341,10 @@ $discount = 25;
 										</figure>
 										<div class="tg-populartourcontent">
 											<div class="tg-populartourtitle">
-												<h5><b><a href="tourbookingdetail.html"><?=strtoupper($key['name']);?></a></b></h5>
+												<h5><b><a href="<?= base_url();?>welcome/detail/<?=$key['id'];?>"><?=strtoupper($key['name']);?></a></b></h5>
 											</div>
 											<div class="tg-description">
-												<p><?=substr($key['tour_desc'],0,120);?>...<a href="">Read more</a></p>
+												<p><?=substr($key['tour_desc'],0,120);?>...<a href="<?= base_url();?>welcome/detail/<?=$key['id'];?>">Read more</a></p>
 											</div>
 											<div class="tg-populartourfoot">
 												<div class="tg-durationrating">

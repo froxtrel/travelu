@@ -26,4 +26,5 @@
 	<link rel="stylesheet" href="<?= base_url();?>public/css/define.css">
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 	<script src="<?= base_url();?>public/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+  	<script src="<?= base_url();?>public/js/vendor/jquery-library.js"></script>
 </head>

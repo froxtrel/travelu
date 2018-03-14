@@ -103,15 +103,15 @@
 							<div id="tg-navigation" class="collapse navbar-collapse tg-navigation">
 								<ul>
 									<li class="menu-item-has-children current-menu-item"><a href="<?=base_url();?>">Home</a>
-										<ul class="sub-menu">
+										<!-- <ul class="sub-menu">
 											<li class="current-menu-item"><a href="index.html">Home ~ Modern</a></li>
 											<li><a href="indexv2.html">Home ~ Full Screen</a></li>
 											<li><a href="indexv3.html">Home ~ Creative</a></li>
 											<li><a href="indexv4.html">Home ~ Simple</a></li>
 											<li><a href="indexv5.html">Home ~ Video</a></li>
-										</ul>
+										</ul> -->
 									</li>
-									<li><a href="destinations.html">destinations</a></li>
+									<!-- <li><a href="destinations.html">destinations</a></li> -->
 									<li class="menu-item-has-children menu-item-has-mega-menu"><a href="javascript:void(0);">listings</a>
 										<div class="mega-menu">
 											<ul>
@@ -193,7 +193,7 @@
 											</div>
 										</div>
 									</li>
-									<li class="menu-item-has-children"><a href="javascript:void(0);">pages</a>
+									<!-- <li class="menu-item-has-children"><a href="javascript:void(0);">pages</a>
 										<ul class="sub-menu">
 											<li><a href="faqs.html">FAQ’s</a></li>
 											<li><a href="packages.html">Table</a></li>
@@ -212,9 +212,9 @@
 												</ul>
 											</li>
 										</ul>
-									</li>
-									<li><a href="shop.html">shop</a></li>
-									<li><a href="blog.html">blog</a></li>
+									</li> -->
+									<!-- <li><a href="shop.html">shop</a></li> -->
+									<!-- <li><a href="blog.html">blog</a></li> -->
 								</ul>
 							</div>
 						</nav>

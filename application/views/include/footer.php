@@ -250,7 +250,7 @@ We offer value-for-money White Water Rafting and Sea Adventure Kayaking packages
 	<!--************************************
 			Login Singup End
 	*************************************-->
-	<script src="<?= base_url();?>public/js/vendor/jquery-library.js"></script>
+
 	<script src="<?= base_url();?>public/js/vendor/bootstrap.min.js"></script>
 	<script src="https://maps.google.com/maps/api/js?key=AIzaSyCR-KEWAVCn52mSdeVeTqZjtqbmVJyfSus&language=en"></script>
 	<script src="<?= base_url();?>public/js/bootstrap-select.min.js"></script>

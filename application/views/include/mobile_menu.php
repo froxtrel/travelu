@@ -1,18 +1,11 @@
-<!--************************************
+************************************
 			Mobile Menu Start
 	*************************************-->
 	<nav id="menu">
 		<ul>
-			<li><a href="javascript:void(0);">Home</a>
-				<ul>
-					<li><a href="index.html">Home ~ Modern</a></li>
-					<li><a href="indexv2.html">Home ~ Full Screen</a></li>
-					<li><a href="indexv3.html">Home ~ Creative</a></li>
-					<li><a href="indexv4.html">Home ~ Simple</a></li>
-					<li><a href="indexv5.html">Home ~ Video</a></li>
-				</ul>
+			<li><a href="<?=base_url();?>">Home</a>				
 			</li>
-			<li><a href="destinations.html">Destinations</a></li>
+			<li><a href="destinations.html">Destinations</a></li></ul>
 			<li><a href="javascript:void(0);">Listings</a>
 				<div>
 					<ul>
@@ -94,7 +87,7 @@
 					</div>
 				</div>
 			</li>
-			<li><a href="javascript:void(0);">Pages</a>
+			<!-- <li><a href="javascript:void(0);">Pages</a>
 				<ul>
 					<li><a href="faqs.html">FAQ’s</a></li>
 					<li><a href="packages.html">Table</a></li>
@@ -120,15 +113,15 @@
 					<li><a href="shopdetail.html">Shop Detail</a></li>
 					<li><a href="cart.html">Cart</a></li>
 				</ul>
-			</li>
-			<li><a href="javascript:void(0);">Blog</a>
+			</li> -->
+			<!-- <li><a href="javascript:void(0);">Blog</a>
 				<ul>
 					<li><a href="blog.html">Blog</a></li>
 					<li><a href="blogdetail.html">Blog Detail</a></li>
 				</ul>
-			</li>
+			</li> -->
 		</ul>
 	</nav>
 	<!--************************************
 			Mobile Menu End
-	*************************************-->
+	*************************************

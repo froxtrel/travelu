@@ -65,11 +65,11 @@
 
 								<div class="tg-populartour tg-populartourvtwo">
 									<figure>
-										<a href="tourbookingdetail.html"><img src="<?= base_url();?>public/images/tours/<?=$key['photo_1'];?>" alt="image destinations"></a>
+										<a href="<?= base_url();?>welcome/detail/<?=$key['id'];?>"><img src="<?= base_url();?>public/images/tours/<?=$key['photo_1'];?>" alt="image destinations"></a>
 									</figure>
 									<div class="tg-populartourcontent">
 										<div class="tg-populartourtitle">
-											<h3><a href="tourbookingdetail.html"><?=strtoupper($key['name']);?></a></h3>
+											<h3><a href="<?= base_url();?>welcome/detail/<?=$key['id'];?>"><?=strtoupper($key['name']);?></a></h3>
 										</div>
 										<div class="tg-description">
 											<p><?=substr($key['tour_desc'],0,115);?></p>
@@ -95,7 +95,7 @@
 										</div>
 										<div class="tg-priceavailability">
 											<div class="tg-availhead">
-												<time datetime="2017-12-12">Availability : Jan 16’ - Dec 16’</time>
+												<time datetime="2017-12-12">Availability : <span style="color:green"><b>Yes</b></span> </time>
 											</div>
 											<div class="tg-pricearea">
 												<span>From</span>
@@ -106,7 +106,7 @@
 													?>													
 											    </h4>
 											</div>
-											<a class="tg-btn" href="tourbookingdetail.html"><span>Explore Tour</span></a>
+											<a class="tg-btn" href="<?= base_url();?>welcome/detail/<?=$key['id'];?>"><span>Explore Tour</span></a>
 										</div>
 									</div>
 								</div>

@@ -47,6 +47,11 @@ class Welcome extends CI_Controller {
 				$list = $this->Tour->get_rafting_list();
 				$cat = 'White Water Rafting';
 				break;
+
+			case 'kayaking':
+				$list = $this->Tour->get_kayaking_list();
+				$cat = 'Sea Kayaking';
+				break;
 			
 			default:
 				# code...
@@ -60,6 +65,32 @@ class Welcome extends CI_Controller {
  		);
 
 		$this->load->view('list',$data);
+	}
+
+	public function detail() {
+
+		$id = $this->uri->segment(3);
+
+		$data = array(
+		    'detail' => $this->Tour->get_tour_detail($id),		   
+		);
+
+		$this->load->view('detail',$data);
+	}
+
+	public function payment() {
+
+		$id    = $this->uri->segment(3);	
+		$adult = $this->uri->segment(4);
+		$child = $this->uri->segment(5);
+
+		$data = array(
+		    'detail' => $this->Tour->get_tour_detail($id),		
+		    'adult' => $adult,
+		    'child' => $child   
+		);
+
+		$this->load->view('payment',$data);
 	}
 }
 
