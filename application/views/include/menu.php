@@ -21,13 +21,14 @@
 						<div class="tg-addnavcartsearch">
 							<nav class="tg-addnav">
 								<ul>
+								    <li><a href="<?=base_url();?>welcome/facebook">facebook</a></li>
 									<li><a href="aboutus.html">about</a></li>
 									<li><a href="contactus.html">contact</a></li>
 								</ul>
 							</nav>
 							<nav class="tg-cartsearch">
 								<ul>
-									<li>
+									<!-- <li>
 										<a href="javascript:void(0);"><img src="<?= base_url();?>public/images/icons/icon-03.png" alt="image destinations"></a>
 										<div class="tg-cartitems">
 											<div class="tg-cartlistitems">
@@ -61,7 +62,7 @@
 												<a class="tg-btn" href="#"><span>view cart</span></a>
 											</div>
 										</div>
-									</li>
+									</li> -->
 									<li><a href="#tg-search"><img src="<?= base_url();?>public/images/icons/icon-04.png" alt="image destinations"></a></li>
 								</ul>
 							</nav>
@@ -111,8 +112,9 @@
 											<li><a href="indexv5.html">Home ~ Video</a></li>
 										</ul> -->
 									</li>
+									<li class="menu-item-has-children menu-item-has-mega-menu"><a href="javascript:void(0);">Tour</a></li>
 									<!-- <li><a href="destinations.html">destinations</a></li> -->
-									<li class="menu-item-has-children menu-item-has-mega-menu"><a href="javascript:void(0);">listings</a>
+									<li class="menu-item-has-children menu-item-has-mega-menu"><a href="<?= base_url();?>welcome/listing/rafting">Rafting</a>
 										<div class="mega-menu">
 											<ul>
 												<li><a href="listingvone.html">list style one</a></li>
@@ -140,11 +142,30 @@
 																</div>
 															</a>
 														</figure>
-													</div>
+													</div>																									
+												</div>
+											</div>
+										</div>
+									</li>
+
+									<!-- <li><a href="destinations.html">destinations</a></li> -->
+									<li class="menu-item-has-children menu-item-has-mega-menu"><a href="<?= base_url();?>welcome/listing/kayaking">Sea Kayaking</a>
+										<div class="mega-menu">
+											<ul>
+												<li><a href="listingvone.html">list style one</a></li>
+												<li><a href="listingvtwo.html">list style two</a></li>
+												<li><a href="listingvthree.html">list style three</a></li>
+												<li><a href="listingvfour.html">list style four</a></li>
+												<li><a href="listingvfive.html">list style five</a></li>
+												<li><a href="listingvsix.html">list style six</a></li>
+											</ul>
+											<div class="tg-sliderarea">
+												<h2>Popular Tours</h2>
+												<div class="tg-trendingtripsslider tg-trendingtrips owl-carousel">
 													<div class="item tg-trendingtrip">
 														<figure>
 															<a href="javascript:void(0);">
-																<img src="<?= base_url();?>public/images/tours/img-06.jpg" alt="image destinations">
+																<img src="<?= base_url();?>public/images/tours/img-05.jpg" alt="image destinations">
 																<div class="tg-hover">
 																	<span class="tg-stars"><span></span></span>
 																	<span class="tg-tourduration">7 Days</span>
@@ -156,11 +177,29 @@
 																</div>
 															</a>
 														</figure>
-													</div>
+													</div>																									
+												</div>
+											</div>
+										</div>
+									</li>
+									<!-- <li><a href="destinations.html">destinations</a></li> -->
+									<li class="menu-item-has-children menu-item-has-mega-menu"><a href="javascript:void(0);">Combo Tour</a>
+										<div class="mega-menu">
+											<ul>
+												<li><a href="listingvone.html">list style one</a></li>
+												<li><a href="listingvtwo.html">list style two</a></li>
+												<li><a href="listingvthree.html">list style three</a></li>
+												<li><a href="listingvfour.html">list style four</a></li>
+												<li><a href="listingvfive.html">list style five</a></li>
+												<li><a href="listingvsix.html">list style six</a></li>
+											</ul>
+											<div class="tg-sliderarea">
+												<h2>Popular Tours</h2>
+												<div class="tg-trendingtripsslider tg-trendingtrips owl-carousel">
 													<div class="item tg-trendingtrip">
 														<figure>
 															<a href="javascript:void(0);">
-																<img src="<?= base_url();?>public/images/tours/img-07.jpg" alt="image destinations">
+																<img src="<?= base_url();?>public/images/tours/img-05.jpg" alt="image destinations">
 																<div class="tg-hover">
 																	<span class="tg-stars"><span></span></span>
 																	<span class="tg-tourduration">7 Days</span>
@@ -172,23 +211,7 @@
 																</div>
 															</a>
 														</figure>
-													</div>
-													<div class="item tg-trendingtrip">
-														<figure>
-															<a href="javascript:void(0);">
-																<img src="<?= base_url();?>public/images/tours/img-08.jpg" alt="image destinations">
-																<div class="tg-hover">
-																	<span class="tg-stars"><span></span></span>
-																	<span class="tg-tourduration">7 Days</span>
-																	<span class="tg-locationname">Paris</span>
-																	<div class="tg-pricearea">
-																		<span>from</span>
-																		<h4>$600</h4>
-																	</div>
-																</div>
-															</a>
-														</figure>
-													</div>
+													</div>																									
 												</div>
 											</div>
 										</div>

@@ -48,8 +48,10 @@ $discount = 25;
 			Wrapper Start
 	*************************************-->
 
+
 <?php include('include/menu.php') ?>
-	
+
+
 		<!--************************************
 				Home Slider Start
 		*************************************-->
@@ -490,7 +492,7 @@ $discount = 25;
 			<!--************************************
 					Our Guides Start
 			*************************************-->
-			<!-- <section class="tg-sectionspace tg-haslayout">
+			<section class="tg-sectionspace tg-haslayout">
 				<div class="container">
 					<div class="row">
 						<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
@@ -528,7 +530,7 @@ $discount = 25;
 						</div>
 					</div>
 				</div>
-			</section> -->
+			</section>
 			<!--************************************
 					Our Guides End
 			*************************************-->

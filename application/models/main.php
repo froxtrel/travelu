@@ -59,4 +59,29 @@ class Main extends CI_Model {
         }
     }
 
+    function insert_page_view($page,$user_ip,$year,$month,$day)
+    {
+
+        $query = $this->db->query("select userip from pageview where page='".$page."' and userip='".$user_ip."'");
+
+        if ( $query->num_rows() > 1 )
+        {
+           
+
+        } else {
+
+            $query = $this->db->query("insert into pageview values('','".$page."','".$user_ip."','".$year."','".$month."','".$day."')");
+        }
+
+    }
+
+    function get_page_view_year($page)
+    {
+
+        $query = $this->db->query("SELECT * FROM pageview where page='".$page."'");
+
+        return  $query->num_rows();
+
+    }
+
 }

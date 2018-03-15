@@ -33,7 +33,7 @@ class Welcome extends CI_Controller {
 		    'wording'     => $this->Main->get_slider_wording(),
 		    'featured'    => $this->Tour->get_featured_tour()
 		);
-
+		
 		$this->load->view('home',$data);
 	}
 
@@ -91,6 +91,11 @@ class Welcome extends CI_Controller {
 		);
 
 		$this->load->view('payment',$data);
+	}
+
+	public function facebook() {
+
+		$this->load->view('facebook');
 	}
 }
 

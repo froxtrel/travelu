@@ -5,6 +5,20 @@ include('include/header.php');
 // print_r($detail);
 $discount = 25;
 
+$year = date("Y");
+$month = date("m");
+$day = date("d");
+
+// gets the user IP Address
+$user_ip = $_SERVER['REMOTE_ADDR'];
+
+//gets full page URL
+$page = $_SERVER['REQUEST_URI'];
+
+$this->load->model('Main');
+
+$this->Main->insert_page_view($page,$user_ip,$year,$month,$day); 
+
  ?>
 <body>
 	<!--[if lt IE 8]>
@@ -127,7 +141,7 @@ $discount = 25;
 											</div>
 											
 										</fieldset>
-									</form>
+									</form>									
 
 									<ul class="tg-tripinfo">
 										<li><span class="tg-tourduration"><?=strtoupper($key['duration']);?></span></li>
@@ -155,7 +169,14 @@ $discount = 25;
 												</ul>
 											</li>
 											<li><a href="javascript:void(0);"><i class="icon-heart"></i>save to wish list</a></li>
-											<li><a href="javascript:void(0);"><i class="icon-eye"></i>3520</a></li>
+											<li>
+											<?php
+
+												$view = $this->Main->get_page_view_year($page); 
+
+											?>
+												<a href="javascript:void(0);"><i class="icon-eye"></i><?=$view;?> View </a>
+											</li>
 										</ul>
 									</div>
 								</div>
@@ -167,6 +188,16 @@ $discount = 25;
 													<span>Overview</span>
 												</a>
 											</li>
+											<li role="presentation">
+												<a href="#pricing" aria-controls="india" role="tab" data-toggle="tab">
+													<span>Price List</span>
+												</a>
+											</li>
+											<!-- <li role="presentation">
+												<a href="#check" aria-controls="india" role="tab" data-toggle="tab">
+													<span>Check Price</span>
+												</a>
+											</li> -->
 											<li role="presentation">
 												<a href="#australia" aria-controls="australia" role="tab" data-toggle="tab">
 													<span>Itinerary</span>
@@ -185,6 +216,11 @@ $discount = 25;
 											<li role="presentation">
 												<a href="#india" aria-controls="india" role="tab" data-toggle="tab">
 													<span>Gallery</span>
+												</a>
+											</li>
+											<li role="presentation">
+												<a href="#info" aria-controls="india" role="tab" data-toggle="tab">
+													<span>Add Info</span>
 												</a>
 											</li>
 										</ul>
@@ -263,6 +299,14 @@ $discount = 25;
 												</div>
 											</div>
 											<div role="tabpanel" class="tab-pane tg-locationtab" id="australia">
+
+											<script type="text/javascript">
+												
+												function changeColor() {
+													alert('test');
+												}
+
+											</script>
 												
 													<object data="http://borneowavehunters.com/<?=strtoupper($key['tour_code']);?>.pdf" type="application/pdf" width="100%" height="500px">
    														<p><b>Example fallback content</b>: This browser does not support PDFs. Please download the PDF to view it: <a href="http://borneowavehunters.com/<?=strtoupper($key['tour_code']);?>.pdf">Download PDF</a>.</p>
@@ -326,6 +370,21 @@ $discount = 25;
 
 													</ul>
 												</div>
+											</div>
+											<div role="tabpanel" class="tab-pane tg-reviewtab" id="pricing">
+
+												<hr>
+												
+											</div>
+											<!-- <div role="tabpanel" class="tab-pane tg-reviewtab" id="check">
+
+												<hr>
+												
+											</div> -->
+											<div role="tabpanel" class="tab-pane tg-reviewtab" id="info">
+
+												<hr>
+												
 											</div>
 										</div>
 									</div>
